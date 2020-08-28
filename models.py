@@ -3,8 +3,6 @@ from django.utils.translation import gettext_lazy as _
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 
-from firebase import get_dataset
-
 
 # Models for Forms
 LCBO_CHOICES = ( 
@@ -18,8 +16,8 @@ LCBO_CHOICES = (
 
 class LCBO(models.Model):
     # placeholder data
-    product     = models.TextField(max_length=120, default=get_dataset()[1]['product'])
-    price       = models.TextField(max_length=120, default=get_dataset()[1]['price'])
+    product     = models.TextField(max_length=120)
+    price       = models.TextField(max_length=120)
     categories  = models.CharField(max_length=120,choices=LCBO_CHOICES)
 
 

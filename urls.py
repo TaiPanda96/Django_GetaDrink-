@@ -19,10 +19,12 @@ from . import views
 from lcbo_app.views import home
 from lcbo_app.views import index
 from lcbo_app.views import lcbo_promos
+from lcbo_app.views import favourites
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lcbo_app/home.html',views.home, name='home'),
     path('lcbo_app/index.html',views.index, name='index'),
     path('lcbo_app/lcbo_promos.html',views.lcbo_promos, name='promos'),
+    path('lcbo_app/favourites.html',views.favourites,  name='favourites'),
 ]

@@ -19,7 +19,7 @@ def get_html(url):
 
 def get_tags(data):
     products_ = []
-    prices = []
+    prices    = []
 
     try:
         product_id    = data.find_all('div',attrs={'class':'product_name'})

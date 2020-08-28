@@ -1,7 +1,8 @@
 class Product(object):
-    def __init__(self,product,price):
+    def __init__(self,product,price,category=None):
         self.product  = product 
         self.price    = price 
+        self.category = category
         self.attributes = dict()
     
     def to_map(self):
@@ -12,4 +13,9 @@ class Product(object):
         if self.price:
            data['price']     = self.price
 
+        if self.category:
+           data['category']  = self.category
+
         return data
+
+
